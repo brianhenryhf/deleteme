@@ -1,3 +1,4 @@
+# REM to add secrets to the project with this workflow in it
 name: Update Trello
 
 on:
