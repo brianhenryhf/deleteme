@@ -1,0 +1,17 @@
+name: Update Trello
+
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      #     - uses: actions/checkout@v2
+      #     - name: Run a one-line script
+      #       run: echo Hello, world!
+      - name: testing
+        uses: brianhenryhf/hello-world-gh-action@master
+        with:
+          who-to-greet: 'Dudeler'
