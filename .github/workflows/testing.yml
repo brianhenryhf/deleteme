@@ -11,6 +11,7 @@ jobs:
       #     - uses: actions/checkout@v2
       #     - name: Run a one-line script
       #       run: echo Hello, world!
-      - uses: brianhenryhf/hello-world-gh-action@master
+      - name: testing
+        uses: brianhenryhf/hello-world-gh-action@master
         with:
           who-to-greet: 'Dudeler'
