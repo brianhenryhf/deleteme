@@ -14,4 +14,5 @@ jobs:
       - name: testing
         uses: brianhenryhf/hello-world-gh-action@master
         with:
-          who-to-greet: 'Dudeler'
+          trello-key: ${{ secrets.TRELLO_KEY }}
+          trello-token: ${{ secrets.TRELLO_TOKEN }}
