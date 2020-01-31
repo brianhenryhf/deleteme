@@ -3,6 +3,7 @@ name: Update Trello
 on:
   pull_request:
     types: [opened]
+    #  edited should also catch mods to comment
 jobs:
   build:
     runs-on: ubuntu-latest
