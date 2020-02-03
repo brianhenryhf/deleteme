@@ -1,0 +1,15 @@
+on: 
+  issue_comment:
+    types: [created, edited]
+  pull_request:
+    types: [edited, opened, synchronize, reopened]
+jobs:
+  confirm-link:
+    runs-on: ubuntu-latest
+    name: Ensure Trello link present as attachment.
+    steps:
+    - name: Confirm Trello link included on Pull Request
+      uses: delivered/trello-github-action@1
+      with:
+        link-regex: '(https:\/\/trello.com[^\)]*)'
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
