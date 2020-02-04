@@ -3,14 +3,23 @@ name: Update Trello
 
 on:
   pull_request:
-    types: [opened, reopened, edited]
+    types: [opened]
 jobs:
-  build:
+  placeholder:
     runs-on: ubuntu-latest
-
     steps:
-      - name: testing
-        uses: brianhenryhf/hello-world-gh-action@master
-        with:
-          trello-key: ${{ secrets.TRELLO_KEY }}
-          trello-token: ${{ secrets.TRELLO_TOKEN }}
+      - run: echo "That's a sharp-looking pull request"
+
+
+#   pull_request:
+#     types: [opened, reopened, edited]
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: testing
+#         uses: brianhenryhf/hello-world-gh-action@master
+#         with:
+#           trello-key: ${{ secrets.TRELLO_KEY }}
+#           trello-token: ${{ secrets.TRELLO_TOKEN }}
