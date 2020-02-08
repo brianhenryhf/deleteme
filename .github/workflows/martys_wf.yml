@@ -9,7 +9,7 @@ jobs:
     name: Ensure Trello link present as attachment.
     steps:
     - name: Confirm Trello link included on Pull Request
-      uses: brianhenryhf/trello-github-action@master
+      uses: brianhenryhf/trello-github-action@allow-trello-links-in-body
       with:
         link-regex: '(https:\/\/trello.com[^\)]*)'
         repo-token: ${{ secrets.GITHUB_TOKEN }}
