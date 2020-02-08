@@ -1,7 +1,11 @@
 name: Attach to Trello
 on:
+  issue_comment:
+    types: [created, edited]
   pull_request:
-    types: [opened, reopened, edited]
+    types: [edited, opened, synchronize, reopened]  
+#  pull_request:
+#    types: [opened, reopened, edited]
 jobs:
   attach-trello:
     runs-on: ubuntu-latest
