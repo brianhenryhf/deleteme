@@ -11,3 +11,4 @@ jobs:
         with:
           trello-key: ${{ secrets.TRELLO_KEY }}
           trello-token: ${{ secrets.TRELLO_TOKEN }}
+          add-pr-comment: true
