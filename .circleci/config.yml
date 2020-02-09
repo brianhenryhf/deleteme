@@ -12,4 +12,4 @@ workflows:
       - build:
         filters:
           branches:
-            only: master
+            only: asdadmadlowhqibd
