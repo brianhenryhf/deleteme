@@ -23,5 +23,5 @@ workflows:
           requires:
             - build
           filters:
-            branches:
-              only: develop
+            tags:
+              only: shmoop
