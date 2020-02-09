@@ -17,10 +17,11 @@ jobs:
 workflows:
   welcome:
     jobs:
+      #seem to have to have two jobs in here (or maybe it's the requires), or circle config processing strips off your filter.  wtf
       - build
       - test:
           requires:
             - build
           filters:
             branches:
-              only: master
+              only: develop
