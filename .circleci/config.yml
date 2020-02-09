@@ -9,7 +9,8 @@ jobs:
 workflows:
   welcome:
     jobs:
+      - thing
       - build:
-        filters:
-          branches:
-            only: master
+    filters:
+      branches:
+        only: master
