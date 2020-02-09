@@ -5,11 +5,22 @@ jobs:
       - image: circleci/ruby:2.6.5-node
     steps:
       - run: ls
+
+  test:
+    docker:
+      - image: circleci/ruby:2.6.5-node
+    steps:
+      - run: pwd
+
+
           
 workflows:
   welcome:
     jobs:
-      - build:
-        filters:
-          branches:
-            only: asdadmadlowhqibd
+      - build
+      - test:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
