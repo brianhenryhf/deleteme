@@ -24,4 +24,5 @@ workflows:
             - build
           filters:
             tags:
-              only: /shmoop.*/
+              #this just doesn't seem to work on commits or tagging ops
+              only: shmoopy
