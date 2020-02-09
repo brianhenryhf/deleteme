@@ -12,5 +12,5 @@ workflows:
     jobs:
       - welcome/run:
         filters:
-          tags:
-            xx*
+          branches:
+            only: master
