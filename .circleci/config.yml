@@ -27,6 +27,11 @@ jobs:
 #              #this just doesn't seem to work on commits or tagging ops
 #              only: shmoopy
               
+              
+#this shit just doesn't work at all - an example out of theoir docs and it compiles the config right, but ignores the 
+#directives.  builds for both on a commit push, even though there are no tags like this in repoo.
+#https://circleci.com/docs/2.0/workflows/#executing-workflows-for-a-git-tag
+              
 workflows:
   version: 2
   untagged-build:
