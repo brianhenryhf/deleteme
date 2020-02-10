@@ -40,7 +40,7 @@ workflows:
   tagged-build:
     jobs:
       - build:
-          filters:	
+          filters:
             tags:
               only: /^v.*/
             branches:
