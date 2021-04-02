@@ -1,0 +1,47 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.6.5-node
+    steps:
+      - run: ls
+
+  test:
+    docker:
+      - image: circleci/ruby:2.6.5-node
+    steps:
+      - run: pwd
+
+
+          
+#workflows:
+#  welcome:
+#    jobs:
+#      #seem to have to have two jobs in here (or maybe it's the requires), or circle config processing strips off your filter.  wtf
+#      - build
+#      - test:
+#          requires:
+#            - build
+#          filters:
+#            tags:
+#              #this just doesn't seem to work on commits or tagging ops
+#              only: shmoopy
+              
+              
+#this shit just doesn't work at all - an example out of theoir docs and it compiles the config right, but ignores the 
+#directives.  builds for both on a commit push, even though there are no tags like this in repoo.
+#https://circleci.com/docs/2.0/workflows/#executing-workflows-for-a-git-tag
+              
+workflows:
+  version: 2
+  untagged-build:
+    jobs:
+      - build
+  tagged-build:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/            
